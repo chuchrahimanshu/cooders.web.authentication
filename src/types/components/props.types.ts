@@ -17,3 +17,17 @@ export interface InputProps {
   onFocus?: FocusEventHandler<HTMLInputElement>;
   onBlur?: FocusEventHandler<HTMLInputElement>;
 }
+
+export interface InputContainerProps {
+  title: string;
+  form: string;
+  type: string;
+  id: string;
+  name: string;
+  value: string | number;
+  placeholder: string;
+  required: boolean;
+  onChange: ChangeEventHandler<HTMLInputElement>;
+  onFocus?: FocusEventHandler<HTMLInputElement>;
+  onBlur?: FocusEventHandler<HTMLInputElement>;
+}
