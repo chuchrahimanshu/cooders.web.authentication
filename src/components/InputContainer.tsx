@@ -13,12 +13,10 @@ const InputContainer: React.FC<InputContainerProps> = ({
   type,
   value,
   onChange,
-  onBlur,
-  onFocus,
 }) => {
   return (
-    <section>
-      <Label form={form} id={id} title={title} />
+    <section className="flex flex-col gap-[6px]">
+      <Label form={form} id={id} title={title} required={required} />
       <Input
         id={id}
         name={name}
@@ -27,8 +25,6 @@ const InputContainer: React.FC<InputContainerProps> = ({
         required={required}
         type={type}
         value={value}
-        onBlur={onBlur}
-        onFocus={onFocus}
       />
     </section>
   );

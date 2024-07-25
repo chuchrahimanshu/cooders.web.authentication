@@ -1,9 +1,10 @@
-import { ChangeEventHandler, FocusEventHandler } from "react";
+import { ChangeEventHandler, ReactNode } from "react";
 
 export interface LabelProps {
   id: string;
   title: string;
   form: string;
+  required: boolean;
 }
 
 export interface InputProps {
@@ -14,8 +15,6 @@ export interface InputProps {
   placeholder: string;
   required: boolean;
   onChange: ChangeEventHandler<HTMLInputElement>;
-  onFocus?: FocusEventHandler<HTMLInputElement>;
-  onBlur?: FocusEventHandler<HTMLInputElement>;
 }
 
 export interface InputContainerProps {
@@ -28,6 +27,8 @@ export interface InputContainerProps {
   placeholder: string;
   required: boolean;
   onChange: ChangeEventHandler<HTMLInputElement>;
-  onFocus?: FocusEventHandler<HTMLInputElement>;
-  onBlur?: FocusEventHandler<HTMLInputElement>;
+}
+
+export interface TwoColumnInputProps {
+  children: ReactNode;
 }

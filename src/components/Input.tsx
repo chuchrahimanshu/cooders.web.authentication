@@ -9,8 +9,6 @@ const Input: React.FC<InputProps> = ({
   placeholder,
   required,
   onChange,
-  onFocus,
-  onBlur,
 }) => {
   return (
     <input
@@ -21,8 +19,7 @@ const Input: React.FC<InputProps> = ({
       placeholder={placeholder}
       required={required}
       onChange={onChange}
-      onFocus={onFocus}
-      onBlur={onBlur}
+      className="bg-transparent outline-none border-[2px] border-PRIMARY_BORDER py-2 px-4 rounded-xl text-white focus:border-SECONDARY_BORDER focus:bg-transparent active:bg-transparent active:border-SECONDARY_BORDER w-[275px]"
     />
   );
 };

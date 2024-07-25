@@ -1,10 +1,13 @@
 import React from "react";
 import { LabelProps } from "../types/components/props.types";
 
-const Label: React.FC<LabelProps> = ({ id, title, form }) => {
+const Label: React.FC<LabelProps> = ({ id, title, form, required }) => {
   return (
-    <label htmlFor={id} form={form} aria-label="">
-      {title}
+    <label
+      htmlFor={id}
+      form={form}
+      className="text-white text-[14px] font-medium opacity-70">
+      {title} {required && <span className="text-red-600">*</span>}
     </label>
   );
 };
