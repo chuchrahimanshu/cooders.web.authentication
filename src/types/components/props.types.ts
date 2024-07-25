@@ -32,3 +32,15 @@ export interface InputContainerProps {
 export interface TwoColumnInputProps {
   children: ReactNode;
 }
+
+export interface HidePasswordProps {
+  showPassword: boolean;
+  handleHidePassword: () => void;
+  handleShowPassword: () => void;
+}
+
+export interface ButtonProps {
+  type: "submit" | "reset" | "button";
+  title: string;
+  disabled: boolean;
+}

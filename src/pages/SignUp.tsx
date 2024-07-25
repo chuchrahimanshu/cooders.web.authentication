@@ -6,6 +6,7 @@ import {
   FormChangeInterface,
   FormSubmitInterface,
 } from "../types/global/event.props";
+import Button from "../components/Button";
 
 const SignUp: React.FC = () => {
   const initialState: SignUpState = {
@@ -83,6 +84,31 @@ const SignUp: React.FC = () => {
           value={formData.username}
         />
       </TwoColumnInput>
+      <TwoColumnInput>
+        <InputContainer
+          form="signup"
+          id="signup-password"
+          name="password"
+          onChange={handleInputChange}
+          placeholder="Johndoe@123"
+          required={true}
+          title="Password"
+          type="password"
+          value={formData.password}
+        />
+        <InputContainer
+          form="signup"
+          id="signup-confirmpassword"
+          name="confirmPassword"
+          onChange={handleInputChange}
+          placeholder="Johndoe@123"
+          required={true}
+          title="Confirm Password"
+          type="password"
+          value={formData.confirmPassword}
+        />
+      </TwoColumnInput>
+      <Button disabled={true} title="Sign Up" type="submit" />
     </form>
   );
 };
