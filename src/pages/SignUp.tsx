@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { SignUpState } from "../types/pages/state.types";
 import {
   FormChangeInterface,
@@ -7,6 +7,7 @@ import {
 import Button from "../components/Button";
 import Form from "../components/Form";
 import SignUpInputs from "../components/SignUpInputs";
+import Social from "../components/Social";
 
 const SignUp: React.FC = () => {
   const initialState: SignUpState = {
@@ -19,6 +20,22 @@ const SignUp: React.FC = () => {
   };
 
   const [formData, setFormData] = useState(initialState);
+  const [formDisabled, setFormDisabled] = useState(true);
+
+  useEffect(() => {
+    if (
+      formData.firstName?.trim() &&
+      formData.lastName?.trim() &&
+      formData.email?.trim() &&
+      formData.username?.trim() &&
+      formData.password?.trim() &&
+      formData.confirmPassword?.trim()
+    ) {
+      setFormDisabled(false);
+    } else {
+      setFormDisabled(true);
+    }
+  }, [formData]);
 
   const handleFormSubmit = (event: FormSubmitInterface) => {
     event.preventDefault();
@@ -39,7 +56,8 @@ const SignUp: React.FC = () => {
       showSkip={true}
       handleSkipClicked={handleSkipClicked}>
       <SignUpInputs formData={formData} handleInputChange={handleInputChange} />
-      <Button disabled={true} title="Sign Up" type="submit" />
+      <Button disabled={formDisabled} title="Sign Up" type="submit" />
+      <Social />
     </Form>
   );
 };
