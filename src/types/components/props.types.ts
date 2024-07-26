@@ -1,4 +1,6 @@
-import { ChangeEventHandler, ReactNode } from "react";
+import { ChangeEventHandler, FormEventHandler, ReactNode } from "react";
+import { SignUpState } from "../pages/state.types";
+import { FormChangeInterface } from "../global/event.types";
 
 export interface LabelProps {
   id: string;
@@ -43,4 +45,16 @@ export interface ButtonProps {
   type: "submit" | "reset" | "button";
   title: string;
   disabled: boolean;
+}
+
+export interface FormProps {
+  children: ReactNode;
+  handleFormSubmit: FormEventHandler<HTMLFormElement>;
+  id: string;
+  heading: string;
+}
+
+export interface SignUpInputsProps {
+  handleInputChange: (event: FormChangeInterface) => void;
+  formData: SignUpState;
 }
