@@ -33,7 +33,7 @@ const Input: React.FC<InputProps> = ({
             placeholder={placeholder}
             required={required}
             onChange={onChange}
-            className="bg-transparent outline-none border-[2px] border-PRIMARY_BORDER py-2 px-4 rounded-xl text-white focus:border-SECONDARY_BORDER focus:bg-transparent active:bg-transparent active:border-SECONDARY_BORDER w-[275px] pr-16"
+            className="bg-transparent outline-none border-[2px] border-PRIMARY_BORDER py-2 px-4 rounded-xl text-white focus:border-SECONDARY_BORDER focus:bg-transparent active:bg-transparent active:border-SECONDARY_BORDER md:w-[280px] pr-16 w-full"
           />
           <HidePassword
             handleHidePassword={handleHidePassword}
@@ -50,7 +50,7 @@ const Input: React.FC<InputProps> = ({
           placeholder={placeholder}
           required={required}
           onChange={onChange}
-          className="bg-transparent outline-none border-[2px] border-PRIMARY_BORDER py-2 px-4 rounded-xl text-white focus:border-SECONDARY_BORDER focus:bg-transparent active:bg-transparent active:border-SECONDARY_BORDER w-[275px]"
+          className="bg-transparent outline-none border-[2px] border-PRIMARY_BORDER py-2 px-4 rounded-xl text-white focus:border-SECONDARY_BORDER focus:bg-transparent active:bg-transparent active:border-SECONDARY_BORDER md:w-[280px] w-full"
         />
       )}
     </>

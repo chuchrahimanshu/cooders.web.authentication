@@ -10,6 +10,9 @@ export default {
         SECONDARY_BORDER: "#00E074",
         PRIMARY_BUTTON: "#FE8A00",
       },
+      screens: {
+        xs: "500px",
+      },
     },
   },
   plugins: [],

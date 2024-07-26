@@ -15,7 +15,7 @@ const InputContainer: React.FC<InputContainerProps> = ({
   onChange,
 }) => {
   return (
-    <section className="flex flex-col gap-[6px]">
+    <section className="flex flex-col gap-[6px] mb-4 md:mb-0">
       <Label form={form} id={id} title={title} required={required} />
       <Input
         id={id}
