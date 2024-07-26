@@ -1,5 +1,5 @@
 import { ChangeEventHandler, FormEventHandler, ReactNode } from "react";
-import { SignUpState } from "../pages/state.types";
+import { SignInState, SignUpState } from "../pages/state.types";
 import { FormChangeInterface } from "../global/event.types";
 
 export interface LabelProps {
@@ -63,4 +63,9 @@ export interface SignUpInputsProps {
 
 export interface SkipProps {
   handleSkipClicked: () => void;
+}
+
+export interface SignInInputsProps {
+  handleInputChange: (event: FormChangeInterface) => void;
+  formData: SignInState;
 }

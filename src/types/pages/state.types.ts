@@ -6,3 +6,8 @@ export interface SignUpState {
   password: string;
   confirmPassword: string;
 }
+
+export interface SignInState {
+  username: string;
+  password: string;
+}
