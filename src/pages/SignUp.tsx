@@ -8,6 +8,13 @@ import Button from "../components/Button";
 import Form from "../components/Form";
 import SignUpInputs from "../components/SignUpInputs";
 import Social from "../components/Social";
+import {
+  validateEmailAddress,
+  validateOnlyAlphabets,
+  validatePassword,
+  validateUsername,
+} from "../utils/validation.util";
+import toast from "react-hot-toast";
 
 const SignUp: React.FC = () => {
   const initialState: SignUpState = {
@@ -39,6 +46,33 @@ const SignUp: React.FC = () => {
 
   const handleFormSubmit = (event: FormSubmitInterface) => {
     event.preventDefault();
+
+    const { firstName, lastName, email, username, password, confirmPassword } =
+      formData;
+
+    if (!validateOnlyAlphabets(firstName)) {
+      return toast.error("Please provide a valid First Name");
+    }
+
+    if (!validateOnlyAlphabets(lastName)) {
+      return toast.error("Please provide a valid Last Name");
+    }
+
+    if (!validateEmailAddress(email)) {
+      return toast.error("Please provide a valid Email Address");
+    }
+
+    if (!validateUsername(username)) {
+      return toast.error("Please follow all Username rules");
+    }
+
+    if (!validatePassword(password)) {
+      return toast.error("Please follow all Password rules");
+    }
+
+    if (password !== confirmPassword) {
+      return toast.error("Password's didn't match");
+    }
   };
   const handleInputChange = (event: FormChangeInterface) => {
     setFormData((prevState) => ({
