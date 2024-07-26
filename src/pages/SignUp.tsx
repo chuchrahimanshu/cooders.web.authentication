@@ -29,9 +29,15 @@ const SignUp: React.FC = () => {
       [event.target.name]: event.target.value,
     }));
   };
+  const handleSkipClicked = () => {};
 
   return (
-    <Form handleFormSubmit={handleFormSubmit} heading="Sign Up" id="signup">
+    <Form
+      handleFormSubmit={handleFormSubmit}
+      heading="Sign Up"
+      id="signup"
+      showSkip={true}
+      handleSkipClicked={handleSkipClicked}>
       <SignUpInputs formData={formData} handleInputChange={handleInputChange} />
       <Button disabled={true} title="Sign Up" type="submit" />
     </Form>

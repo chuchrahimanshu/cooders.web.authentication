@@ -52,9 +52,15 @@ export interface FormProps {
   handleFormSubmit: FormEventHandler<HTMLFormElement>;
   id: string;
   heading: string;
+  showSkip: boolean;
+  handleSkipClicked?: () => void;
 }
 
 export interface SignUpInputsProps {
   handleInputChange: (event: FormChangeInterface) => void;
   formData: SignUpState;
+}
+
+export interface SkipProps {
+  handleSkipClicked: () => void;
 }
