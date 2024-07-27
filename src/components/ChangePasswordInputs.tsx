@@ -11,13 +11,13 @@ const ChangePasswordInputs: React.FC<ChangePasswordInputsProps> = ({
       <InputContainer
         form="changepassword"
         id="changepassword-username"
-        name="email"
+        name="username"
         onChange={handleInputChange}
-        placeholder="johndoe@gmail.com"
+        placeholder="johndoe"
         required={true}
-        title="Email Address"
+        title="Username"
         type="text"
-        value={formData.email}
+        value={formData.username}
         disabled={true}
       />
       <InputContainer

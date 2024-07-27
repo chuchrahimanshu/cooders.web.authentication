@@ -7,10 +7,13 @@ import Form from "../components/Form";
 import Button from "../components/Button";
 import { ChangePasswordState } from "../types/pages/state.types";
 import ChangePasswordInputs from "../components/ChangePasswordInputs";
+import { useNavigate } from "react-router-dom";
 
 const ChangePassword: React.FC = () => {
+  const navigate = useNavigate();
+
   const initialState: ChangePasswordState = {
-    email: "",
+    username: "",
     password: "",
     confirmPassword: "",
   };
@@ -36,6 +39,10 @@ const ChangePassword: React.FC = () => {
     event.preventDefault();
   };
 
+  const handleSignInNavigation = () => {
+    navigate("/accounts/sign-in");
+  };
+
   return (
     <Form
       handleFormSubmit={handleFormSubmit}
@@ -48,7 +55,9 @@ const ChangePassword: React.FC = () => {
       />
       <p className="text-white text-center mb-1 md:-mb-[10px] -mt-1">
         Remember?{" "}
-        <span className="text-SECONDARY_BORDER cursor-pointer hover:text-PRIMARY_BUTTON">
+        <span
+          className="text-SECONDARY_BORDER cursor-pointer hover:text-PRIMARY_BUTTON"
+          onClick={handleSignInNavigation}>
           Sign In
         </span>
       </p>

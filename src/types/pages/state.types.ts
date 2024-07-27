@@ -13,7 +13,7 @@ export interface SignInState {
 }
 
 export interface ChangePasswordState {
-  email: string;
+  username: string;
   password: string;
   confirmPassword: string;
 }
