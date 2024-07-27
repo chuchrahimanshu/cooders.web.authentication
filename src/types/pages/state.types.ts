@@ -17,3 +17,7 @@ export interface ChangePasswordState {
   password: string;
   confirmPassword: string;
 }
+
+export interface AuthenticateState {
+  email: string;
+}

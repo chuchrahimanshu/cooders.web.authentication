@@ -16,10 +16,8 @@ const Form: React.FC<FormProps> = ({
       id={id}
       onSubmit={handleFormSubmit}>
       {showSkip && handleSkipClicked ? (
-        <section className="flex items-center justify-between mb-3">
-          <h1 className="text-[22px] text-white font-semibold mb-2">
-            {heading}
-          </h1>
+        <section className="flex items-center justify-between mb-4">
+          <h1 className="text-[22px] text-white font-semibold">{heading}</h1>
           <Skip handleSkipClicked={handleSkipClicked} />
         </section>
       ) : (

@@ -1,5 +1,6 @@
 import { ChangeEventHandler, FormEventHandler, ReactNode } from "react";
 import {
+  AuthenticateState,
   ChangePasswordState,
   SignInState,
   SignUpState,
@@ -83,4 +84,9 @@ export interface SignInInputsProps {
 export interface ChangePasswordInputsProps {
   handleInputChange: (event: FormChangeInterface) => void;
   formData: ChangePasswordState;
+}
+
+export interface AuthenticateInputsProps {
+  handleInputChange: (event: FormChangeInterface) => void;
+  formData: AuthenticateState;
 }
