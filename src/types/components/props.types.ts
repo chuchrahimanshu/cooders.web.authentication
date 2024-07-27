@@ -10,6 +10,7 @@ export interface LabelProps {
 }
 
 export interface InputProps {
+  form: string;
   type: string;
   id: string;
   name: string;
@@ -17,6 +18,7 @@ export interface InputProps {
   placeholder: string;
   required: boolean;
   onChange: ChangeEventHandler<HTMLInputElement>;
+  handleRandomPassword?: () => void;
 }
 
 export interface InputContainerProps {
@@ -29,6 +31,7 @@ export interface InputContainerProps {
   placeholder: string;
   required: boolean;
   onChange: ChangeEventHandler<HTMLInputElement>;
+  handleRandomPassword?: () => void;
 }
 
 export interface TwoColumnInputProps {
@@ -57,6 +60,7 @@ export interface FormProps {
 }
 
 export interface SignUpInputsProps {
+  handleRandomPassword?: () => void;
   handleInputChange: (event: FormChangeInterface) => void;
   formData: SignUpState;
 }

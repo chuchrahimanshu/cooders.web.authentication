@@ -13,11 +13,13 @@ const InputContainer: React.FC<InputContainerProps> = ({
   type,
   value,
   onChange,
+  handleRandomPassword,
 }) => {
   return (
     <section className="flex flex-col gap-[6px] mb-4 md:mb-0">
       <Label form={form} id={id} title={title} required={required} />
       <Input
+        form={form}
         id={id}
         name={name}
         onChange={onChange}
@@ -25,6 +27,7 @@ const InputContainer: React.FC<InputContainerProps> = ({
         required={required}
         type={type}
         value={value}
+        handleRandomPassword={handleRandomPassword}
       />
     </section>
   );

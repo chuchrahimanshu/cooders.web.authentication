@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { InputProps } from "../types/components/props.types";
 import HidePassword from "./HidePassword";
+import { RiAiGenerate } from "react-icons/ri";
 
 const Input: React.FC<InputProps> = ({
+  form,
   type,
   id,
   name,
@@ -10,6 +12,7 @@ const Input: React.FC<InputProps> = ({
   placeholder,
   required,
   onChange,
+  handleRandomPassword,
 }) => {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -35,6 +38,13 @@ const Input: React.FC<InputProps> = ({
             onChange={onChange}
             className="bg-transparent outline-none border-[2px] border-PRIMARY_BORDER py-2 px-4 rounded-xl text-white focus:border-SECONDARY_BORDER focus:bg-transparent active:bg-transparent active:border-SECONDARY_BORDER md:w-[280px] pr-16 w-full"
           />
+          {form === "signup" && name === "password" && (
+            <RiAiGenerate
+              className="text-white absolute top-3 right-10 text-lg cursor-pointer"
+              title="Generate Random Password"
+              onClick={handleRandomPassword}
+            />
+          )}
           <HidePassword
             handleHidePassword={handleHidePassword}
             handleShowPassword={handleShowPassword}

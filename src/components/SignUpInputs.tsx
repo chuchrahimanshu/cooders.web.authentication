@@ -4,6 +4,7 @@ import TwoColumnInput from "./TwoColumnInput";
 import InputContainer from "./InputContainer";
 
 const SignUpInputs: React.FC<SignUpInputsProps> = ({
+  handleRandomPassword,
   handleInputChange,
   formData,
 }) => {
@@ -68,6 +69,7 @@ const SignUpInputs: React.FC<SignUpInputsProps> = ({
           title="Password"
           type="password"
           value={formData.password}
+          handleRandomPassword={handleRandomPassword}
         />
         <InputContainer
           form="signup"

@@ -15,6 +15,7 @@ import {
   validateUsername,
 } from "../utils/validation.util";
 import toast from "react-hot-toast";
+import { generateRandomPassword } from "../utils/helper.util";
 
 const SignUp: React.FC = () => {
   const initialState: SignUpState = {
@@ -74,13 +75,24 @@ const SignUp: React.FC = () => {
       return toast.error("Password's didn't match");
     }
   };
+
   const handleInputChange = (event: FormChangeInterface) => {
     setFormData((prevState) => ({
       ...prevState,
       [event.target.name]: event.target.value,
     }));
   };
+
   const handleSkipClicked = () => {};
+
+  const handleRandomPassword = () => {
+    const randomPassword: string = generateRandomPassword();
+    setFormData((prevState) => ({
+      ...prevState,
+      ["password"]: randomPassword,
+      ["confirmPassword"]: randomPassword,
+    }));
+  };
 
   return (
     <Form
@@ -89,7 +101,11 @@ const SignUp: React.FC = () => {
       id="signup"
       showSkip={true}
       handleSkipClicked={handleSkipClicked}>
-      <SignUpInputs formData={formData} handleInputChange={handleInputChange} />
+      <SignUpInputs
+        formData={formData}
+        handleInputChange={handleInputChange}
+        handleRandomPassword={handleRandomPassword}
+      />
       <Button disabled={formDisabled} title="Sign Up" type="submit" />
       <Social />
     </Form>
