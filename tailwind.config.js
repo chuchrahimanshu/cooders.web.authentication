@@ -4,11 +4,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        PRIMARY_BACKGROUND: "#080C0F",
-        SECONDARY_BACKGROUND: "#1C242E",
-        PRIMARY_BORDER: "#22353E",
-        SECONDARY_BORDER: "#00E074",
-        PRIMARY_BUTTON: "#FE8A00",
+        "base-background": "#080C0F",
+        "overlay-background": "#1C242E",
+        "base-border": "#22353E",
+        "highlight-border": "#00E074",
+        "action-button": "#FE8A00",
       },
       screens: {
         xs: "500px",

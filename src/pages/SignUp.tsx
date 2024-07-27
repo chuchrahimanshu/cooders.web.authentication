@@ -111,7 +111,7 @@ const SignUp: React.FC = () => {
         <CheckboxInput />
         <p className="text-white text-sm font-medium">
           Back to Cooder?{" "}
-          <span className="text-SECONDARY_BORDER hover:text-PRIMARY_BUTTON cursor-pointer">
+          <span className="text-highlight-border hover:text-action-button cursor-pointer">
             Sign In
           </span>
         </p>

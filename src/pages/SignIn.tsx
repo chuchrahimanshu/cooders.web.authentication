@@ -73,7 +73,7 @@ const SignIn: React.FC = () => {
       handleSkipClicked={handleSkipClicked}>
       <SignInInputs formData={formData} handleInputChange={handleInputChange} />
       <p
-        className="text-SECONDARY_BORDER text-center mb-1 md:-mb-[10px] -mt-1 cursor-pointer hover:text-PRIMARY_BUTTON"
+        className="text-highlight-border text-center mb-1 md:-mb-[10px] -mt-1 cursor-pointer hover:text-action-button"
         onClick={handleForgetPasswordNavigation}>
         Forget Password
       </p>

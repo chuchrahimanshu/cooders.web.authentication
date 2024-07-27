@@ -11,12 +11,12 @@ const HidePassword: React.FC<HidePasswordProps> = ({
     <>
       {showPassword ? (
         <FaEyeSlash
-          className="text-white absolute top-3 right-3 text-lg cursor-pointer hover:text-PRIMARY_BUTTON"
+          className="text-white absolute top-3 right-3 text-lg cursor-pointer hover:text-action-button"
           onClick={handleHidePassword}
         />
       ) : (
         <FaEye
-          className="text-white absolute top-3 right-3 text-lg cursor-pointer hover:text-PRIMARY_BUTTON"
+          className="text-white absolute top-3 right-3 text-lg cursor-pointer hover:text-action-button"
           onClick={handleShowPassword}
         />
       )}

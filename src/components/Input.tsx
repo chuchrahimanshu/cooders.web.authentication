@@ -38,11 +38,11 @@ const Input: React.FC<InputProps> = ({
             required={required}
             onChange={onChange}
             disabled={disabled}
-            className="bg-transparent outline-none border-[2px] border-PRIMARY_BORDER py-2 px-4 rounded-xl text-white focus:border-SECONDARY_BORDER focus:bg-transparent active:bg-transparent active:border-SECONDARY_BORDER md:w-[300px] pr-16 w-full"
+            className="bg-transparent outline-none border-[2px] border-base-border py-2 px-4 rounded-xl text-white focus:border-highlight-border focus:bg-transparent active:bg-transparent active:border-highlight-border md:w-[300px] pr-16 w-full"
           />
           {form === "signup" && name === "password" && (
             <RiAiGenerate
-              className="text-white absolute top-3 right-10 text-lg cursor-pointer hover:text-SECONDARY_BORDER"
+              className="text-white absolute top-3 right-10 text-lg cursor-pointer hover:text-highlight-border"
               title="Generate Random Password"
               onClick={handleRandomPassword}
             />
@@ -63,7 +63,7 @@ const Input: React.FC<InputProps> = ({
           required={required}
           onChange={onChange}
           disabled={disabled}
-          className="bg-transparent outline-none border-[2px] border-PRIMARY_BORDER py-2 px-4 rounded-xl text-white focus:border-SECONDARY_BORDER focus:bg-transparent active:bg-transparent active:border-SECONDARY_BORDER md:w-[300px] w-full disabled:cursor-not-allowed"
+          className="bg-transparent outline-none border-[2px] border-base-border py-2 px-4 rounded-xl text-white focus:border-highlight-border focus:bg-transparent active:bg-transparent active:border-highlight-border md:w-[300px] w-full disabled:cursor-not-allowed"
         />
       )}
     </>

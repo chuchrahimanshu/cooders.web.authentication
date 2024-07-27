@@ -56,7 +56,7 @@ const ChangePassword: React.FC = () => {
       <p className="text-white text-center mb-1 md:-mb-[10px] -mt-1">
         Remember?{" "}
         <span
-          className="text-SECONDARY_BORDER cursor-pointer hover:text-PRIMARY_BUTTON"
+          className="text-highlight-border cursor-pointer hover:text-action-button"
           onClick={handleSignInNavigation}>
           Sign In
         </span>
