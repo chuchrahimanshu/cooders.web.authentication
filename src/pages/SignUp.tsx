@@ -16,6 +16,7 @@ import {
 } from "../utils/validation.util";
 import toast from "react-hot-toast";
 import { generateRandomPassword } from "../utils/helper.util";
+import CheckboxInput from "../components/CheckboxInput";
 
 const SignUp: React.FC = () => {
   const initialState: SignUpState = {
@@ -106,6 +107,15 @@ const SignUp: React.FC = () => {
         handleInputChange={handleInputChange}
         handleRandomPassword={handleRandomPassword}
       />
+      <section className="flex justify-between items-center">
+        <CheckboxInput />
+        <p className="text-white text-sm font-medium">
+          Back to Cooder?{" "}
+          <span className="text-SECONDARY_BORDER hover:text-PRIMARY_BUTTON cursor-pointer">
+            Sign In
+          </span>
+        </p>
+      </section>
       <Button disabled={formDisabled} title="Sign Up" type="submit" />
       <Social />
     </Form>
