@@ -12,6 +12,7 @@ const InputContainer: React.FC<InputContainerProps> = ({
   title,
   type,
   value,
+  disabled,
   onChange,
   handleRandomPassword,
 }) => {
@@ -27,6 +28,7 @@ const InputContainer: React.FC<InputContainerProps> = ({
         required={required}
         type={type}
         value={value}
+        disabled={disabled}
         handleRandomPassword={handleRandomPassword}
       />
     </section>

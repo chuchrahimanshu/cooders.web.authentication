@@ -1,5 +1,9 @@
 import { ChangeEventHandler, FormEventHandler, ReactNode } from "react";
-import { SignInState, SignUpState } from "../pages/state.types";
+import {
+  ChangePasswordState,
+  SignInState,
+  SignUpState,
+} from "../pages/state.types";
 import { FormChangeInterface } from "../global/event.types";
 
 export interface LabelProps {
@@ -17,6 +21,7 @@ export interface InputProps {
   value: string | number;
   placeholder: string;
   required: boolean;
+  disabled?: boolean;
   onChange: ChangeEventHandler<HTMLInputElement>;
   handleRandomPassword?: () => void;
 }
@@ -30,6 +35,7 @@ export interface InputContainerProps {
   value: string | number;
   placeholder: string;
   required: boolean;
+  disabled?: boolean;
   onChange: ChangeEventHandler<HTMLInputElement>;
   handleRandomPassword?: () => void;
 }
@@ -72,4 +78,9 @@ export interface SkipProps {
 export interface SignInInputsProps {
   handleInputChange: (event: FormChangeInterface) => void;
   formData: SignInState;
+}
+
+export interface ChangePasswordInputsProps {
+  handleInputChange: (event: FormChangeInterface) => void;
+  formData: ChangePasswordState;
 }

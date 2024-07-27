@@ -11,6 +11,7 @@ const Input: React.FC<InputProps> = ({
   value,
   placeholder,
   required,
+  disabled = false,
   onChange,
   handleRandomPassword,
 }) => {
@@ -36,6 +37,7 @@ const Input: React.FC<InputProps> = ({
             placeholder={placeholder}
             required={required}
             onChange={onChange}
+            disabled={disabled}
             className="bg-transparent outline-none border-[2px] border-PRIMARY_BORDER py-2 px-4 rounded-xl text-white focus:border-SECONDARY_BORDER focus:bg-transparent active:bg-transparent active:border-SECONDARY_BORDER md:w-[280px] pr-16 w-full"
           />
           {form === "signup" && name === "password" && (
@@ -60,7 +62,8 @@ const Input: React.FC<InputProps> = ({
           placeholder={placeholder}
           required={required}
           onChange={onChange}
-          className="bg-transparent outline-none border-[2px] border-PRIMARY_BORDER py-2 px-4 rounded-xl text-white focus:border-SECONDARY_BORDER focus:bg-transparent active:bg-transparent active:border-SECONDARY_BORDER md:w-[280px] w-full"
+          disabled={disabled}
+          className="bg-transparent outline-none border-[2px] border-PRIMARY_BORDER py-2 px-4 rounded-xl text-white focus:border-SECONDARY_BORDER focus:bg-transparent active:bg-transparent active:border-SECONDARY_BORDER md:w-[280px] w-full disabled:cursor-not-allowed"
         />
       )}
     </>
