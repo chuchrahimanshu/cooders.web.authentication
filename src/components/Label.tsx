@@ -6,7 +6,7 @@ const Label: React.FC<LabelProps> = ({ id, title, form, required }) => {
     <label
       htmlFor={id}
       form={form}
-      className="text-white text-[14px] font-medium opacity-70">
+      className="text-base-text text-[14px] font-medium opacity-70">
       {title} {required && <span className="text-red-600">*</span>}
     </label>
   );

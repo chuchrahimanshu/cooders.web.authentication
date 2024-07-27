@@ -20,12 +20,19 @@ const CheckboxInput: React.FC = () => {
       <span
         className={`w-4 h-4 inline-flex items-center justify-center bg-gray-200 border border-gray-300 cursor-pointer rounded-md relative ${
           isChecked
-            ? "bg-green-600 border-transparent cursor-pointer"
+            ? "bg-action-button border-transparent cursor-pointer"
             : "cursor-pointer"
         }`}>
-        {isChecked && <FaCheck color="#ffffff" size={11} />}
+        {isChecked && (
+          <FaCheck
+            size={11}
+            className={isChecked ? " text-highlight-border" : "#ffffff"}
+          />
+        )}
       </span>
-      <span className="text-white cursor-pointer text-sm">Remember Me!</span>
+      <span className="text-base-text cursor-pointer text-sm">
+        Remember Me!
+      </span>
     </label>
   );
 };

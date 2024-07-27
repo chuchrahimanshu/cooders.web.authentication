@@ -17,11 +17,15 @@ const Form: React.FC<FormProps> = ({
       onSubmit={handleFormSubmit}>
       {showSkip && handleSkipClicked ? (
         <section className="flex items-center justify-between mb-4">
-          <h1 className="text-[22px] text-white font-semibold">{heading}</h1>
+          <h1 className="text-[22px] text-base-text font-semibold">
+            {heading}
+          </h1>
           <Skip handleSkipClicked={handleSkipClicked} />
         </section>
       ) : (
-        <h1 className="text-[22px] text-white font-semibold mb-2">{heading}</h1>
+        <h1 className="text-[22px] text-base-text font-semibold mb-2">
+          {heading}
+        </h1>
       )}
       {children}
     </form>

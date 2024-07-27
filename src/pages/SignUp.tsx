@@ -109,7 +109,7 @@ const SignUp: React.FC = () => {
       />
       <section className="flex justify-between items-center">
         <CheckboxInput />
-        <p className="text-white text-sm font-medium">
+        <p className="text-base-text text-sm font-medium">
           Back to Cooder?{" "}
           <span className="text-highlight-border hover:text-action-button cursor-pointer">
             Sign In

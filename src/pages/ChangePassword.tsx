@@ -53,7 +53,7 @@ const ChangePassword: React.FC = () => {
         formData={formData}
         handleInputChange={handleInputChange}
       />
-      <p className="text-white text-center mb-1 md:-mb-[10px] -mt-1">
+      <p className="text-base-text text-center mb-1 md:-mb-[10px] -mt-1">
         Remember?{" "}
         <span
           className="text-highlight-border cursor-pointer hover:text-action-button"

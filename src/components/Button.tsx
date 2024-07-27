@@ -23,7 +23,7 @@ const Button: React.FC<ButtonProps> = ({ title, type, disabled }) => {
         className={
           hoverButton
             ? "text-base font-medium text-highlight-border"
-            : "text-base font-medium text-white"
+            : "text-base font-medium text-base-text"
         }>
         {title}
       </span>

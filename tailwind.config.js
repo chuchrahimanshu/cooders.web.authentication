@@ -4,11 +4,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        "base-background": "#080C0F",
-        "overlay-background": "#1C242E",
-        "base-border": "#22353E",
-        "highlight-border": "#00E074",
-        "action-button": "#FE8A00",
+        "base-background": "var(--base-background)",
+        "overlay-background": "var(--overlay-background)",
+        "base-border": "var(--base-border)",
+        "highlight-border": "var(--highlight-border)",
+        "action-button": "var(--action-button)",
+        "base-text": "var(--base-text)",
       },
       screens: {
         xs: "500px",
