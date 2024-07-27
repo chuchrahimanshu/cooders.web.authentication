@@ -59,7 +59,7 @@ const SignIn: React.FC = () => {
       return toast.error("Enter Username to Forget Password");
     }
 
-    navigate("/accounts/change-password", {
+    navigate("/change-password", {
       state: { email: formData.username },
     });
   };

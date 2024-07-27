@@ -40,7 +40,7 @@ const ChangePassword: React.FC = () => {
   };
 
   const handleSignInNavigation = () => {
-    navigate("/accounts/sign-in");
+    navigate("/sign-in");
   };
 
   return (
