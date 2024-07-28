@@ -6,7 +6,15 @@ const App: React.FC = () => {
   return (
     <>
       <Router />
-      <Toaster />
+      <Toaster
+        position="bottom-right"
+        toastOptions={{
+          style: {
+            backgroundColor: "#121212",
+            color: "#e0e0e0",
+          },
+        }}
+      />
     </>
   );
 };

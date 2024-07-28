@@ -48,7 +48,7 @@ const Authenticate: React.FC = () => {
   return (
     <Form
       handleFormSubmit={handleFormSubmit}
-      heading="🧙‍♂️ Welcome!"
+      heading="🔥Ignite!"
       id="authenticate"
       showSkip={true}
       handleSkipClicked={handleSkipClicked}>
