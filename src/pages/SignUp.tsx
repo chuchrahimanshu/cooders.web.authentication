@@ -107,7 +107,7 @@ const SignUp: React.FC = () => {
         handleInputChange={handleInputChange}
         handleRandomPassword={handleRandomPassword}
       />
-      <section className="flex justify-between items-center">
+      <section className="flex flex-col gap-3 sm:gap-0 sm:flex-row justify-between items-center mb-2 md:mb-0">
         <CheckboxInput />
         <p className="text-base-text text-sm font-medium">
           Back to Cooder?{" "}
