@@ -8,6 +8,7 @@ import {
 import {
   AuthenticateState,
   ChangePasswordState,
+  EmailVerificationState,
   SignInState,
   SignUpState,
 } from "../pages/state.types";
@@ -43,7 +44,7 @@ export interface InputContainerProps {
   placeholder: string;
   required: boolean;
   disabled?: boolean;
-  onChange: ChangeEventHandler<HTMLInputElement>;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
   handleRandomPassword?: () => void;
 }
 
@@ -100,4 +101,9 @@ export interface AuthenticateInputsProps {
 export interface ModalProps {
   setShowModal: Dispatch<SetStateAction<boolean>>;
   children: ReactNode;
+}
+
+export interface EmailVerificationInputsProps {
+  formData: EmailVerificationState;
+  setFormData: React.Dispatch<React.SetStateAction<EmailVerificationState>>;
 }

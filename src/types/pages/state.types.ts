@@ -21,3 +21,8 @@ export interface ChangePasswordState {
 export interface AuthenticateState {
   email: string;
 }
+
+export interface EmailVerificationState {
+  email: string;
+  otp: string;
+}
