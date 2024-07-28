@@ -22,7 +22,7 @@ export interface AuthenticateState {
   email: string;
 }
 
-export interface EmailVerificationState {
+export interface OTPState {
   email: string;
   otp: string;
 }

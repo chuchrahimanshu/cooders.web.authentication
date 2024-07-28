@@ -1,17 +1,14 @@
 import React from "react";
 import InputContainer from "./InputContainer";
-import { OTPInputsProps } from "../types/components/props.types";
 import OTPInput from "./OTPInput";
+import { OTPInputsProps } from "../types/components/props.types";
 
-const EmailVerificationInputs: React.FC<OTPInputsProps> = ({
-  formData,
-  setFormData,
-}) => {
+const TFAInputs: React.FC<OTPInputsProps> = ({ formData, setFormData }) => {
   return (
     <>
       <InputContainer
-        form="emailverification"
-        id="emailverification-email"
+        form="tfa"
+        id="tfa-email"
         name="email"
         placeholder="johndoe@gmail.com"
         required={true}
@@ -25,4 +22,4 @@ const EmailVerificationInputs: React.FC<OTPInputsProps> = ({
   );
 };
 
-export default EmailVerificationInputs;
+export default TFAInputs;

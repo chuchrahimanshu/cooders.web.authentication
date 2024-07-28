@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
-import { EmailVerificationState } from "../types/pages/state.types";
+import { OTPState } from "../types/pages/state.types";
 
 const OTPInput: React.FC<{
-  setFormData: React.Dispatch<React.SetStateAction<EmailVerificationState>>;
+  setFormData: React.Dispatch<React.SetStateAction<OTPState>>;
 }> = ({ setFormData }) => {
   const otpInputRef = useRef<(HTMLInputElement | null)[]>([]);
 

@@ -1,4 +1,4 @@
-import {
+import React, {
   ChangeEventHandler,
   Dispatch,
   FormEventHandler,
@@ -8,7 +8,7 @@ import {
 import {
   AuthenticateState,
   ChangePasswordState,
-  EmailVerificationState,
+  OTPState,
   SignInState,
   SignUpState,
 } from "../pages/state.types";
@@ -103,7 +103,7 @@ export interface ModalProps {
   children: ReactNode;
 }
 
-export interface EmailVerificationInputsProps {
-  formData: EmailVerificationState;
-  setFormData: React.Dispatch<React.SetStateAction<EmailVerificationState>>;
+export interface OTPInputsProps {
+  formData: OTPState;
+  setFormData: React.Dispatch<React.SetStateAction<OTPState>>;
 }

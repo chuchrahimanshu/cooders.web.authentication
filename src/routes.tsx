@@ -6,6 +6,7 @@ import SignIn from "./pages/SignIn";
 import ChangePassword from "./pages/ChangePassword";
 import Authenticate from "./pages/Authenticate";
 import EmailVerification from "./pages/EmailVerification";
+import TwoFactorAuthentication from "./pages/TwoFactorAuthentication";
 
 const Router: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ const Router: React.FC = () => {
           <Route path="sessions" element={<SignIn />} />
           <Route path="updates/password" element={<ChangePassword />} />
           <Route path="validates/email" element={<EmailVerification />} />
+          <Route path="validates/tfa" element={<TwoFactorAuthentication />} />
         </Route>
       </Routes>
     </BrowserRouter>

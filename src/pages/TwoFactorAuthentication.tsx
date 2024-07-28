@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { FormSubmitInterface } from "../types/global/event.types";
 import Form from "../components/Form";
 import Button from "../components/Button";
-import { useLocation, useNavigate } from "react-router-dom";
 import { OTPState } from "../types/pages/state.types";
-import EmailVerificationInputs from "../components/EmailVerificationInputs";
+import TFAInputs from "../components/TFAInputs";
 
-const EmailVerification: React.FC = () => {
+const TwoFactorAuthentication: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -18,9 +18,9 @@ const EmailVerification: React.FC = () => {
   const [formDisabled, setFormDisabled] = useState(true);
 
   useEffect(() => {
-    if (!location.state?.email) {
-      navigate("/sessions");
-    }
+    // if (!location.state?.email) {
+    //   navigate("/sessions");
+    // }
 
     if (formData.email?.trim() && formData.otp?.trim()) {
       setFormDisabled(false);
@@ -29,6 +29,8 @@ const EmailVerification: React.FC = () => {
     }
   }, [navigate, formData, location]);
 
+  console.log(formData.otp);
+
   const handleFormSubmit = (event: FormSubmitInterface) => {
     event.preventDefault();
   };
@@ -36,13 +38,13 @@ const EmailVerification: React.FC = () => {
   return (
     <Form
       handleFormSubmit={handleFormSubmit}
-      heading="Email Verification"
-      id="emailverification"
+      heading="TFA"
+      id="tfa"
       showSkip={false}>
-      <EmailVerificationInputs formData={formData} setFormData={setFormData} />
+      <TFAInputs formData={formData} setFormData={setFormData} />
       <Button disabled={formDisabled} title="Verify" type="submit" />
     </Form>
   );
 };
 
-export default EmailVerification;
+export default TwoFactorAuthentication;
