@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ButtonProps } from "../types/components/props.types";
+import { ButtonProps } from "../../types/components.types";
 
 const Button: React.FC<ButtonProps> = ({ title, type, disabled }) => {
   const [hoverButton, setHoverButton] = useState(false);

@@ -1,5 +1,5 @@
 import React from "react";
-import { SkipProps } from "../types/components/props.types";
+import { SkipProps } from "../../types/components.types";
 
 const Skip: React.FC<SkipProps> = ({ handleSkipClicked }) => {
   return (

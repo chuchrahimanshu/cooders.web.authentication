@@ -1,6 +1,6 @@
 import React from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { HidePasswordProps } from "../types/components/props.types";
+import { HidePasswordProps } from "../../types/components.types";
 
 const HidePassword: React.FC<HidePasswordProps> = ({
   showPassword,

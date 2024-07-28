@@ -5,14 +5,15 @@ import React, {
   ReactNode,
   SetStateAction,
 } from "react";
+
 import {
   AuthenticateState,
   ChangePasswordState,
   OTPState,
   SignInState,
   SignUpState,
-} from "../pages/state.types";
-import { FormChangeInterface } from "../global/event.types";
+} from "./pages.types";
+import { FormChangeInterface } from "./global.types";
 
 export interface LabelProps {
   id: string;
@@ -30,7 +31,7 @@ export interface InputProps {
   placeholder: string;
   required: boolean;
   disabled?: boolean;
-  onChange: ChangeEventHandler<HTMLInputElement>;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
   handleRandomPassword?: () => void;
 }
 

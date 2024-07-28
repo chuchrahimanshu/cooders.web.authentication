@@ -1,6 +1,6 @@
 import React from "react";
-import InputContainer from "./InputContainer";
-import { SignInInputsProps } from "../types/components/props.types";
+import InputContainer from "../form/InputContainer";
+import { SignInInputsProps } from "../../types/components.types";
 
 const SignInInputs: React.FC<SignInInputsProps> = ({
   formData,

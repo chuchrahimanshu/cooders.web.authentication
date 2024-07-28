@@ -1,7 +1,7 @@
 import React from "react";
-import InputContainer from "./InputContainer";
-import { OTPInputsProps } from "../types/components/props.types";
-import OTPInput from "./OTPInput";
+import InputContainer from "../form/InputContainer";
+import OTPInput from "../form/OTPInput";
+import { OTPInputsProps } from "../../types/components.types";
 
 const EmailVerificationInputs: React.FC<OTPInputsProps> = ({
   formData,

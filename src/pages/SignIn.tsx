@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import Form from "../components/Form";
-import SignInInputs from "../components/SignInInputs";
-import Button from "../components/Button";
-import Social from "../components/Social";
-import { SignInState } from "../types/pages/state.types";
+import Form from "../components/form/Form";
+import SignInInputs from "../components/input/SignInInputs";
+import Button from "../components/form/Button";
+import Social from "../components/global/Social";
+import { SignInState } from "../types/pages.types";
 import {
   FormChangeInterface,
   FormSubmitInterface,
-} from "../types/global/event.types";
+} from "../types/global.types";
 import { validatePassword, validateUsername } from "../utils/validation.util";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";

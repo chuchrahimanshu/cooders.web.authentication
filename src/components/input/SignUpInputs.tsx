@@ -1,7 +1,7 @@
 import React from "react";
-import { SignUpInputsProps } from "../types/components/props.types";
-import TwoColumnInput from "./TwoColumnInput";
-import InputContainer from "./InputContainer";
+import TwoColumnInput from "../form/TwoColumnInput";
+import InputContainer from "../form/InputContainer";
+import { SignUpInputsProps } from "../../types/components.types";
 
 const SignUpInputs: React.FC<SignUpInputsProps> = ({
   handleRandomPassword,

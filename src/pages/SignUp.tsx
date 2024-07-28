@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { SignUpState } from "../types/pages/state.types";
+import { SignUpState } from "../types/pages.types";
 import {
   FormChangeInterface,
   FormSubmitInterface,
-} from "../types/global/event.types";
-import Button from "../components/Button";
-import Form from "../components/Form";
-import SignUpInputs from "../components/SignUpInputs";
-import Social from "../components/Social";
+} from "../types/global.types";
+import Button from "../components/form/Button";
+import Form from "../components/form/Form";
+import SignUpInputs from "../components/input/SignUpInputs";
+import Social from "../components/global/Social";
 import {
   validateEmailAddress,
   validateOnlyAlphabets,
@@ -16,7 +16,7 @@ import {
 } from "../utils/validation.util";
 import toast from "react-hot-toast";
 import { generateRandomPassword } from "../utils/helper.util";
-import CheckboxInput from "../components/CheckboxInput";
+import CheckboxInput from "../components/form/CheckboxInput";
 
 const SignUp: React.FC = () => {
   const initialState: SignUpState = {

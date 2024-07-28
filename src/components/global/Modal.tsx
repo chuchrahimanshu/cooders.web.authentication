@@ -1,6 +1,6 @@
 import React from "react";
 import { RiCloseCircleLine } from "react-icons/ri";
-import { ModalProps } from "../types/components/props.types";
+import { ModalProps } from "../../types/components.types";
 
 const Modal: React.FC<ModalProps> = ({ children, setShowModal }) => {
   const handleCloseModal = () => {

@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
-import Form from "../components/Form";
-import { AuthenticateState } from "../types/pages/state.types";
+import Form from "../components/form/Form";
+import { validateEmailAddress } from "../utils/validation.util";
+import toast from "react-hot-toast";
+import Button from "../components/form/Button";
+import Social from "../components/global/Social";
+import AuthenticateInputs from "../components/input/AuthenticateInputs";
+import { AuthenticateState } from "../types/pages.types";
 import {
   FormChangeInterface,
   FormSubmitInterface,
-} from "../types/global/event.types";
-import { validateEmailAddress } from "../utils/validation.util";
-import toast from "react-hot-toast";
-import Button from "../components/Button";
-import Social from "../components/Social";
-import AuthenticateInputs from "../components/AuthenticateInputs";
+} from "../types/global.types";
 
 const Authenticate: React.FC = () => {
   const initialState: AuthenticateState = {

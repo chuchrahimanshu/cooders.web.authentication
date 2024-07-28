@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import {
   FormChangeInterface,
   FormSubmitInterface,
-} from "../types/global/event.types";
-import Form from "../components/Form";
-import Button from "../components/Button";
-import { ChangePasswordState } from "../types/pages/state.types";
-import ChangePasswordInputs from "../components/ChangePasswordInputs";
+} from "../types/global.types";
+import Form from "../components/form/Form";
+import Button from "../components/form/Button";
+import ChangePasswordInputs from "../components/input/ChangePasswordInputs";
 import { useNavigate } from "react-router-dom";
+import { ChangePasswordState } from "../types/pages.types";
 
 const ChangePassword: React.FC = () => {
   const navigate = useNavigate();
@@ -40,7 +40,7 @@ const ChangePassword: React.FC = () => {
   };
 
   const handleSignInNavigation = () => {
-    navigate("/sign-in");
+    navigate("/sessions");
   };
 
   return (
@@ -53,10 +53,10 @@ const ChangePassword: React.FC = () => {
         formData={formData}
         handleInputChange={handleInputChange}
       />
-      <p className="text-base-text text-center mb-1 md:-mb-[10px] -mt-1">
+      <p className="text-base-text text-center mb-1 md:-mb-[10px] -mt-1 text-sm">
         Remember?{" "}
         <span
-          className="text-highlight-border cursor-pointer hover:text-action-button"
+          className="text-highlight-border cursor-pointer hover:text-action-button text-sm"
           onClick={handleSignInNavigation}>
           Sign In
         </span>

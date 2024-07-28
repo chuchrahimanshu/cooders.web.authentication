@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { FormSubmitInterface } from "../types/global/event.types";
-import Form from "../components/Form";
-import Button from "../components/Button";
-import { OTPState } from "../types/pages/state.types";
-import TFAInputs from "../components/TFAInputs";
+import { FormSubmitInterface } from "../types/global.types";
+import Form from "../components/form/Form";
+import Button from "../components/form/Button";
+import { OTPState } from "../types/pages.types";
+import TFAInputs from "../components/input/TFAInputs";
 
 const TwoFactorAuthentication: React.FC = () => {
   const location = useLocation();
@@ -28,8 +28,6 @@ const TwoFactorAuthentication: React.FC = () => {
       setFormDisabled(true);
     }
   }, [navigate, formData, location]);
-
-  console.log(formData.otp);
 
   const handleFormSubmit = (event: FormSubmitInterface) => {
     event.preventDefault();

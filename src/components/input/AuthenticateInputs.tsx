@@ -1,6 +1,6 @@
 import React from "react";
-import InputContainer from "./InputContainer";
-import { AuthenticateInputsProps } from "../types/components/props.types";
+import InputContainer from "../form/InputContainer";
+import { AuthenticateInputsProps } from "../../types/components.types";
 
 const AuthenticateInputs: React.FC<AuthenticateInputsProps> = ({
   formData,

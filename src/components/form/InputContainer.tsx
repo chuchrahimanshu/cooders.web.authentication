@@ -1,7 +1,7 @@
 import React from "react";
 import Label from "./Label";
-import { InputContainerProps } from "../types/components/props.types";
 import Input from "./Input";
+import { InputContainerProps } from "../../types/components.types";
 
 const InputContainer: React.FC<InputContainerProps> = ({
   form,

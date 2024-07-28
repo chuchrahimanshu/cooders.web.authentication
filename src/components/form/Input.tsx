@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { InputProps } from "../types/components/props.types";
 import HidePassword from "./HidePassword";
 import { RiAiGenerate } from "react-icons/ri";
+import { InputProps } from "../../types/components.types";
 
 const Input: React.FC<InputProps> = ({
   form,

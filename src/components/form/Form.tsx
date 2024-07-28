@@ -1,6 +1,6 @@
 import React from "react";
-import { FormProps } from "../types/components/props.types";
-import Skip from "./Skip";
+import Skip from "../global/Skip";
+import { FormProps } from "../../types/components.types";
 
 const Form: React.FC<FormProps> = ({
   children,

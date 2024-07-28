@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { FormSubmitInterface } from "../types/global/event.types";
-import Form from "../components/Form";
-import Button from "../components/Button";
+import { FormSubmitInterface } from "../types/global.types";
+import Form from "../components/form/Form";
+import Button from "../components/form/Button";
 import { useLocation, useNavigate } from "react-router-dom";
-import { OTPState } from "../types/pages/state.types";
-import EmailVerificationInputs from "../components/EmailVerificationInputs";
+import { OTPState } from "../types/pages.types";
+import EmailVerificationInputs from "../components/input/EmailVerificationInputs";
 
 const EmailVerification: React.FC = () => {
   const location = useLocation();
@@ -18,9 +18,9 @@ const EmailVerification: React.FC = () => {
   const [formDisabled, setFormDisabled] = useState(true);
 
   useEffect(() => {
-    if (!location.state?.email) {
-      navigate("/sessions");
-    }
+    // if (!location.state?.email) {
+    //   navigate("/sessions");
+    // }
 
     if (formData.email?.trim() && formData.otp?.trim()) {
       setFormDisabled(false);

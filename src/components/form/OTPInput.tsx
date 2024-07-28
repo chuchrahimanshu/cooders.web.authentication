@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { OTPState } from "../types/pages/state.types";
+import { OTPState } from "../../types/pages.types";
 
 const OTPInput: React.FC<{
   setFormData: React.Dispatch<React.SetStateAction<OTPState>>;
