@@ -1,4 +1,10 @@
-import { ChangeEventHandler, FormEventHandler, ReactNode } from "react";
+import {
+  ChangeEventHandler,
+  Dispatch,
+  FormEventHandler,
+  ReactNode,
+  SetStateAction,
+} from "react";
 import {
   AuthenticateState,
   ChangePasswordState,
@@ -89,4 +95,9 @@ export interface ChangePasswordInputsProps {
 export interface AuthenticateInputsProps {
   handleInputChange: (event: FormChangeInterface) => void;
   formData: AuthenticateState;
+}
+
+export interface ModalProps {
+  setShowModal: Dispatch<SetStateAction<boolean>>;
+  children: ReactNode;
 }
