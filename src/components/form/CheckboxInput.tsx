@@ -18,15 +18,15 @@ const CheckboxInput: React.FC = () => {
         className="hidden"
       />
       <span
-        className={`w-4 h-4 inline-flex items-center justify-center bg-gray-200 border border-gray-300 cursor-pointer rounded-md relative ${
+        className={`${
           isChecked
-            ? "bg-action-button border-transparent cursor-pointer"
-            : "cursor-pointer"
+            ? "bg-action-button cursor-pointer w-4 h-4 inline-flex items-center justify-center border border-action-button rounded-md relative"
+            : "cursor-pointer w-4 h-4 inline-flex items-center justify-center bg-gray-200 border border-gray-300 rounded-md relative"
         }`}>
         {isChecked && (
           <FaCheck
             size={11}
-            className={isChecked ? " text-highlight-border" : "#ffffff"}
+            className={isChecked ? "text-highlight-border mb-[1px]" : "#ffffff"}
           />
         )}
       </span>

@@ -7,7 +7,7 @@ export const validateEmailAddress = (value: string): boolean => {
 };
 
 export const validateUsername = (value: string): boolean => {
-  return /^[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*$/.test(value);
+  return /^[a-z0-9_]{3,20}$/.test(value);
 };
 
 export const validatePassword = (value: string): boolean => {

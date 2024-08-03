@@ -14,11 +14,20 @@ const Router: React.FC = () => {
       <Routes>
         <Route path="/" element={<Authentication />}>
           <Route path="" element={<Authenticate />} />
-          <Route path="sessions/create" element={<SignUp />} />
-          <Route path="sessions" element={<SignIn />} />
-          <Route path="updates/password" element={<ChangePassword />} />
-          <Route path="validates/email" element={<EmailVerification />} />
-          <Route path="validates/tfa" element={<TwoFactorAuthentication />} />
+          <Route path="accounts/new" element={<SignUp />} />
+          <Route path="accounts" element={<SignIn />} />
+          <Route
+            path="accounts/updates/password"
+            element={<ChangePassword />}
+          />
+          <Route
+            path="accounts/validates/email"
+            element={<EmailVerification />}
+          />
+          <Route
+            path="accounts/validates/tfa"
+            element={<TwoFactorAuthentication />}
+          />
         </Route>
       </Routes>
     </BrowserRouter>

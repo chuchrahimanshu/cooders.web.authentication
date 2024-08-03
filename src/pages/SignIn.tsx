@@ -10,10 +10,10 @@ import {
 } from "../types/global.types";
 import { validatePassword, validateUsername } from "../utils/validation.util";
 import toast from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
+import { NavigateFunction, useNavigate } from "react-router-dom";
 
 const SignIn: React.FC = () => {
-  const navigate = useNavigate();
+  const navigate: NavigateFunction = useNavigate();
 
   const initialState: SignInState = {
     username: "",
@@ -31,6 +31,13 @@ const SignIn: React.FC = () => {
     }
   }, [formData]);
 
+  const handleInputChange = (event: FormChangeInterface) => {
+    setFormData((prevState) => ({
+      ...prevState,
+      [event.target.name]: event.target.value,
+    }));
+  };
+
   const handleFormSubmit = (event: FormSubmitInterface) => {
     event.preventDefault();
 
@@ -45,13 +52,6 @@ const SignIn: React.FC = () => {
     }
   };
 
-  const handleInputChange = (event: FormChangeInterface) => {
-    setFormData((prevState) => ({
-      ...prevState,
-      [event.target.name]: event.target.value,
-    }));
-  };
-
   const handleSkipClicked = () => {};
 
   const handleForgetPasswordNavigation = () => {
@@ -59,7 +59,7 @@ const SignIn: React.FC = () => {
       return toast.error("Enter Username to Forget Password");
     }
 
-    navigate("/change-password", {
+    navigate("", {
       state: { email: formData.username },
     });
   };

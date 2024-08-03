@@ -10,8 +10,11 @@ import {
   FormChangeInterface,
   FormSubmitInterface,
 } from "../types/global.types";
+import { NavigateFunction, useNavigate } from "react-router-dom";
 
 const Authenticate: React.FC = () => {
+  const navigate: NavigateFunction = useNavigate();
+
   const initialState: AuthenticateState = {
     email: "",
   };
@@ -27,21 +30,24 @@ const Authenticate: React.FC = () => {
     }
   }, [formData]);
 
-  const handleFormSubmit = (event: FormSubmitInterface) => {
-    event.preventDefault();
-
-    const { email } = formData;
-
-    if (!validateEmailAddress(email)) {
-      return toast.error("Please provide a valid Email Address");
-    }
-  };
-
   const handleInputChange = (event: FormChangeInterface) => {
     setFormData((prevState) => ({
       ...prevState,
       [event.target.name]: event.target.value,
     }));
+  };
+
+  const handleFormSubmit = (event: FormSubmitInterface) => {
+    event.preventDefault();
+
+    const { email } = formData;
+
+    if (!email?.trim() || !validateEmailAddress(email)) {
+      return toast.error("Please provide a valid Email Address");
+    }
+
+    // TODO: API CALL
+    navigate("/accounts/new");
   };
 
   const handleSkipClicked = () => {};

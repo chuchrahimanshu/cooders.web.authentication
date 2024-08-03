@@ -17,8 +17,11 @@ import {
 import toast from "react-hot-toast";
 import { generateRandomPassword } from "../utils/helper.util";
 import CheckboxInput from "../components/form/CheckboxInput";
+import { NavigateFunction, useNavigate } from "react-router-dom";
 
 const SignUp: React.FC = () => {
+  const navigate: NavigateFunction = useNavigate();
+
   const initialState: SignUpState = {
     firstName: "",
     lastName: "",
@@ -45,6 +48,13 @@ const SignUp: React.FC = () => {
       setFormDisabled(true);
     }
   }, [formData]);
+
+  const handleInputChange = (event: FormChangeInterface) => {
+    setFormData((prevState) => ({
+      ...prevState,
+      [event.target.name]: event.target.value,
+    }));
+  };
 
   const handleFormSubmit = (event: FormSubmitInterface) => {
     event.preventDefault();
@@ -75,16 +85,15 @@ const SignUp: React.FC = () => {
     if (password !== confirmPassword) {
       return toast.error("Password's didn't match");
     }
-  };
 
-  const handleInputChange = (event: FormChangeInterface) => {
-    setFormData((prevState) => ({
-      ...prevState,
-      [event.target.name]: event.target.value,
-    }));
+    navigate("/accounts");
   };
 
   const handleSkipClicked = () => {};
+
+  const handleSignInNavigation = () => {
+    navigate("/accounts");
+  };
 
   const handleRandomPassword = () => {
     const randomPassword: string = generateRandomPassword();
@@ -111,7 +120,9 @@ const SignUp: React.FC = () => {
         <CheckboxInput />
         <p className="text-base-text text-sm font-medium">
           Back to Cooder?{" "}
-          <span className="text-highlight-border hover:text-action-button cursor-pointer">
+          <span
+            className="text-highlight-border hover:text-action-button cursor-pointer"
+            onClick={handleSignInNavigation}>
             Sign In
           </span>
         </p>
