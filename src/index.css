@@ -19,3 +19,7 @@ body {
 html::-webkit-scrollbar {
   display: none;
 }
+
+input::placeholder {
+  opacity: 0.3;
+}

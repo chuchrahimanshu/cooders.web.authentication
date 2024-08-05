@@ -62,7 +62,7 @@ const OTPInput: React.FC<{
   return (
     <section>
       <Label form={form} id={id} required={true} title={title} />
-      <section className="flex justify-between mt-1">
+      <section className="flex justify-between mt-1" id={id}>
         {Array.from({ length: 6 }, (_, index) => (
           <input
             key={index}

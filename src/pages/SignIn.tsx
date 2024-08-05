@@ -59,7 +59,7 @@ const SignIn: React.FC = () => {
       return toast.error("Enter Username to Forget Password");
     }
 
-    navigate("", {
+    navigate("/accounts/validates/password", {
       state: { username: formData.username },
     });
   };
