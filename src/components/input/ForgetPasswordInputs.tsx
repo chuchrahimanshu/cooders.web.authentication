@@ -1,17 +1,17 @@
 import React from "react";
+import { OTPInputsProps } from "../../types/components.types";
 import InputContainer from "../form/InputContainer";
 import OTPInput from "../form/OTPInput";
-import { OTPInputsProps } from "../../types/components.types";
 
-const EmailVerificationInputs: React.FC<OTPInputsProps> = ({
+const ForgetPasswordInputs: React.FC<OTPInputsProps> = ({
   formData,
   setFormData,
 }) => {
   return (
     <>
       <InputContainer
-        form="emailverification"
-        id="emailverification-username"
+        form="forgetpassword"
+        id="forgetpassword-username"
         name="username"
         placeholder="johndoe"
         required={true}
@@ -23,11 +23,11 @@ const EmailVerificationInputs: React.FC<OTPInputsProps> = ({
       <OTPInput
         setFormData={setFormData}
         title="OTP"
-        id="emailverification-otp"
-        form="emailverification"
+        id="forgetpassword-otp"
+        form="forgetpassword"
       />
     </>
   );
 };
 
-export default EmailVerificationInputs;
+export default ForgetPasswordInputs;

@@ -23,6 +23,6 @@ export interface AuthenticateState {
 }
 
 export interface OTPState {
-  email: string;
+  username: string;
   otp: string;
 }

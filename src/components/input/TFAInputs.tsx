@@ -8,16 +8,16 @@ const TFAInputs: React.FC<OTPInputsProps> = ({ formData, setFormData }) => {
     <>
       <InputContainer
         form="tfa"
-        id="tfa-email"
-        name="email"
-        placeholder="johndoe@gmail.com"
+        id="tfa-username"
+        name="username"
+        placeholder="johndoe"
         required={true}
-        title="Email Address"
-        type="email"
-        value={formData.email}
+        title="Username"
+        type="text"
+        value={formData.username}
         disabled={true}
       />
-      <OTPInput setFormData={setFormData} />
+      <OTPInput setFormData={setFormData} title="OTP" id="tfa-otp" form="tfa" />
     </>
   );
 };

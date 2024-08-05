@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import { FormSubmitInterface } from "../types/global.types";
 import Form from "../components/form/Form";
 import Button from "../components/form/Button";
+import { useLocation, useNavigate } from "react-router-dom";
 import { OTPState } from "../types/pages.types";
-import TFAInputs from "../components/input/TFAInputs";
+import { FormSubmitInterface } from "../types/global.types";
+import ForgetPasswordInputs from "../components/input/ForgetPasswordInputs";
 
-const TwoFactorAuthentication: React.FC = () => {
+const ForgetPassword: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -36,13 +36,13 @@ const TwoFactorAuthentication: React.FC = () => {
   return (
     <Form
       handleFormSubmit={handleFormSubmit}
-      heading="TFA"
-      id="tfa"
+      heading="Forget Password"
+      id="forgetpassword"
       showSkip={false}>
-      <TFAInputs formData={formData} setFormData={setFormData} />
+      <ForgetPasswordInputs formData={formData} setFormData={setFormData} />
       <Button disabled={formDisabled} title="Verify" type="submit" />
     </Form>
   );
 };
 
-export default TwoFactorAuthentication;
+export default ForgetPassword;

@@ -11,7 +11,7 @@ const EmailVerification: React.FC = () => {
   const navigate = useNavigate();
 
   const initialState: OTPState = {
-    email: location.state?.email,
+    username: location.state?.username,
     otp: "",
   };
   const [formData, setFormData] = useState(initialState);
@@ -22,7 +22,7 @@ const EmailVerification: React.FC = () => {
     //   navigate("/sessions");
     // }
 
-    if (formData.email?.trim() && formData.otp?.trim()) {
+    if (formData.username?.trim() && formData.otp?.trim()) {
       setFormDisabled(false);
     } else {
       setFormDisabled(true);

@@ -1,9 +1,13 @@
 import React, { useRef } from "react";
 import { OTPState } from "../../types/pages.types";
+import Label from "./Label";
 
 const OTPInput: React.FC<{
   setFormData: React.Dispatch<React.SetStateAction<OTPState>>;
-}> = ({ setFormData }) => {
+  title: string;
+  id: string;
+  form: string;
+}> = ({ setFormData, form, id, title }) => {
   const otpInputRef = useRef<(HTMLInputElement | null)[]>([]);
 
   const handleInputChange = (
@@ -56,19 +60,22 @@ const OTPInput: React.FC<{
   };
 
   return (
-    <section className="flex justify-between">
-      {Array.from({ length: 6 }, (_, index) => (
-        <input
-          key={index}
-          type="text"
-          ref={(element) => (otpInputRef.current[index] = element)}
-          className="bg-transparent outline-none border-2 border-base-border w-11 h-11 rounded-xl focus:border-highlight-border text-base-text text-[18px] font-medium text-center"
-          onChange={(event) => handleInputChange(event, index)}
-          onKeyDown={(event) => handleBackwardPress(event, index)}
-          onPaste={handlePaste}
-          maxLength={1}
-        />
-      ))}
+    <section>
+      <Label form={form} id={id} required={true} title={title} />
+      <section className="flex justify-between mt-1">
+        {Array.from({ length: 6 }, (_, index) => (
+          <input
+            key={index}
+            type="text"
+            ref={(element) => (otpInputRef.current[index] = element)}
+            className="bg-transparent outline-none border-2 border-base-border w-11 h-11 rounded-xl focus:border-highlight-border text-base-text text-[18px] font-medium text-center"
+            onChange={(event) => handleInputChange(event, index)}
+            onKeyDown={(event) => handleBackwardPress(event, index)}
+            onPaste={handlePaste}
+            maxLength={1}
+          />
+        ))}
+      </section>
     </section>
   );
 };

@@ -60,7 +60,7 @@ const SignIn: React.FC = () => {
     }
 
     navigate("", {
-      state: { email: formData.username },
+      state: { username: formData.username },
     });
   };
 
